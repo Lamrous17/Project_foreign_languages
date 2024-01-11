@@ -34,3 +34,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.swiper-button-next,
+.swiper-button-prev{
+  color: #ffffffb3 !important;
+}
+
+p ul ol {
+  margin: 0;
+  padding: 0;
+}
