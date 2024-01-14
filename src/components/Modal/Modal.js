@@ -45,7 +45,7 @@ export const ModalHeaders = styled.h2`
   font-size: 24px;
   font-weight: 300;
   line-height: 33px;
-  margin-bottom: 99px;
+  margin-bottom: 34px;
 `;
 export const ModalAddIndfo = styled.p`
   font-family: NeueMachina;
@@ -53,6 +53,15 @@ export const ModalAddIndfo = styled.p`
   font-weight: 300;
   line-height: 23px;
   margin-bottom: 30px;
+`;
+export const ModalOR = styled.div`
+ display: flex;
+ gap: 25px;
+ justify-content: center;
+ align-items: center;
+`;
+export const StyledLine = styled.img`
+ max-width: 40%;
 `;
 export const ChangeModalBtn = styled.button`
   background: linear-gradient(171.92deg, #713BE4 6.22%, #E800C3 93.8%),
@@ -82,7 +91,7 @@ export const GoogleBtn = styled.button`
   margin-bottom: 40px;
 `;
 export const ModalForm = styled.form`
-  margin-top: 18px;
+  margin-top: 97px;
   align-self: flex-start;
   display: flex;
   flex-direction: column;
