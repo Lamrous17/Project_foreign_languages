@@ -18,9 +18,9 @@ const UserMenu = () => {
       <UserMenuCloseBtn onClick={closeMenu} type="button"><UserMenuStyledClose/></UserMenuCloseBtn>
       <UserMenuName>Username</UserMenuName>
       <UserMenuList>
-        <UserMenuListItem><UserMenuListItemImg src={profile} alt="" /><UserMenuListLink href="/profile">Профиль</UserMenuListLink></UserMenuListItem>
-        <UserMenuListItem><UserMenuListItemImg src={profilEexit} alt="" /><UserMenuListLink onClick={exit} href="/">Выйти из аккаунта</UserMenuListLink></UserMenuListItem>
-        <UserMenuListItem><UserMenuListLink href="/">Главная страница</UserMenuListLink></UserMenuListItem>
+        <UserMenuListItem><UserMenuListItemImg src={profile} alt="" /><UserMenuListLink href="/Project_foreign_languages/#/profile">Профиль</UserMenuListLink></UserMenuListItem>
+        <UserMenuListItem><UserMenuListItemImg src={profilEexit} alt="" /><UserMenuListLink onClick={exit} href="/Project_foreign_languages">Выйти из аккаунта</UserMenuListLink></UserMenuListItem>
+        <UserMenuListItem><UserMenuListLink href="/Project_foreign_languages">Главная страница</UserMenuListLink></UserMenuListItem>
       </UserMenuList>
     </StyledUserMenu>
   )
