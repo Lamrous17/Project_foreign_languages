@@ -1,4 +1,4 @@
-import out from '../../assets/icons/Out.svg'
+
 import menu from '../../assets/icons/Menu.svg'
 import flag from '../../assets/images/flag.jpg'
 import { Flag, FlagContainer, LanguageContainer, LanguageName, ScoreCounter, StyledLanguageHeader, StyledLanguageMenuBtn, StyledLanguageOutBtn, UserName } from './LanguageHeader.js'
@@ -6,9 +6,11 @@ import UserMenu from '../UserMenu/UserMenu.jsx'
 import { useLocation } from 'react-router-dom'
 
 const LanguageHeader = () => {
+
   const location = useLocation();
 
   function openMenu() {
+    console.log(location)
     const menu = document.querySelector('#userMenu')
     menu.style.transform = "translateX(0%)";
   }
