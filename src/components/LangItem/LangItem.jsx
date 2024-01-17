@@ -12,7 +12,7 @@ const LangItem = ({ flag, language }) => {
       return toast.error("Пока что доступен только Английский язык")
     }
     
-    return window.location.href ='/Language/#/english'
+    return window.location.href ='/Project_foreign_languages/#/english'
   }
 
   return (
