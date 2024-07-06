@@ -1,22 +1,25 @@
+import React from 'react';
 import { CloseTaskBtn, StyledTaskClose, VocabularyLevelModal, VocabularyTaskName, VocabularyList, VocabularyItem, RightBtn, RightBtnImg } from "../LevelsModals.js";
-import rightArrow from "../../../assets/images/RightArrow.png"
+import rightArrow from "../../../assets/images/RightArrow.png";
+import tasksData from "./tasks.json"; 
 
-const FirstTask = ({closeModal, handleRightClick}) => {
-  
+const FirstTask = ({ closeModal, handleRightClick }) => {
+  const vocabularyItems = tasksData.task.map(task => (
+    <VocabularyItem key={task.id}>
+      {task.english} - {task.russian}
+    </VocabularyItem>
+  ));
+
   return (
     <VocabularyLevelModal>
       <CloseTaskBtn type="button"><StyledTaskClose onClick={closeModal} /></CloseTaskBtn>
       <VocabularyTaskName>Словарь</VocabularyTaskName>
       <VocabularyList>
-        <VocabularyItem>Hi/Bye - привет/пока</VocabularyItem>
-        <VocabularyItem>Name - имя</VocabularyItem>
-        <VocabularyItem>My name is Stasy - меня зовут Стейси</VocabularyItem>
-        <VocabularyItem>He/she/it - он/она/оно</VocabularyItem>
-        <VocabularyItem>He is Alex - его зовут Алекс</VocabularyItem>
+        {vocabularyItems}
       </VocabularyList>
       <RightBtn onClick={handleRightClick} type="button"><RightBtnImg src={rightArrow} alt="" /></RightBtn>
     </VocabularyLevelModal>
-  )
-}
+  );
+};
 
-export default FirstTask
+export default FirstTask;
