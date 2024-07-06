@@ -1,0 +1,53 @@
+{
+    "task": [
+    { 
+        "id": 1,
+        "english": "Hi", 
+        "russian": "Привет",
+        "level": 1, 
+        "label": 0 
+    },
+    {
+        "id": 2,
+        "english": "Bye", 
+        "russian": "Пока", 
+        "level": 1, 
+        "label": 0 
+    },
+    {
+        "id": 3,
+        "english": "My name is Stasy", 
+        "russian": "Меня зовут Стейси", 
+        "level": 1, 
+        "label": 0 
+    },
+    {
+        "id": 4,
+        "english": "Say", 
+        "russian": "Говорить", 
+        "level": 1, 
+        "label": 0 
+    },
+    {
+        "id": 5,
+        "english": "He is Alex", 
+        "russian": "Его зовут Алекс", 
+        "level": 1, 
+        "label": 0 
+    },
+    {
+        "id": 6,
+        "english": "He", 
+        "russian": "Он", 
+        "level": 1, 
+        "label": 0 
+    },
+    {
+        "id": 7,
+        "english": "Say my name", 
+        "russian": "Скажи мое имя", 
+        "level": 1, 
+        "label": 1 
+    }
+  ]
+}
