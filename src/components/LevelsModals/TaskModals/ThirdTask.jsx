@@ -18,8 +18,9 @@ const ThirdTask = ({ closeModal, handleRightClick, handleLeftClick }) => {
     event.preventDefault();
     if (userInput.trim().toLowerCase() === correctAnswer.toLowerCase()) {
       toast.success('Верно!'); 
+      handleRightClick(); 
     } else {
-      toast.error('Неверно. Попробуйте еще!'); 
+      toast.error('Неверно. Попробуйте еще раз!'); 
     }
   };
 
@@ -45,7 +46,7 @@ const ThirdTask = ({ closeModal, handleRightClick, handleLeftClick }) => {
       </VideoTaskForm>
 
       <LeftBtn onClick={handleLeftClick} type="button"><LeftBtnImg src={leftArrow} alt="" /></LeftBtn>
-      <RightBtn onClick={handleRightClick} type="button"><RightBtnImg src={rightArrow} alt="" /></RightBtn>
+      <RightBtn onClick={handleRightClick} type="button" disabled={!userInput}><RightBtnImg src={rightArrow} alt="" /></RightBtn>
     </VideoLevelModal>
   );
 };

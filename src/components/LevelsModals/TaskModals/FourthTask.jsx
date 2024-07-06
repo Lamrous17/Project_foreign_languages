@@ -20,7 +20,7 @@ const FourthTask = ({ closeModal, handleLeftClick }) => {
       toast.success('Верно!');
     } else {
       setShowToast(false);
-      toast.error('Неверно. Попробуйте еще!');
+      toast.error('Неверно. Попробуйте еще раз!');
     }
   };
 
