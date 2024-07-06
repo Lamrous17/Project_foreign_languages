@@ -30,6 +30,43 @@ const Modal = ({ closeModal }) => {
       return toast.error("Неправильно введенный имейл или пароль");
     }
   }
+  function register(e) {
+    e.preventDefault();
+  
+    const enteredEmail = e.target.elements.user_mail.value;
+    const enteredName = e.target.elements.user_name.value;
+    const enteredPassword = e.target.elements.user_password.value;
+  
+    const existingUser = tasksData.user.find((user) => user.email === enteredEmail);
+  
+    if (existingUser) {
+      // Обновляем данные существующего пользователя
+      existingUser.name = enteredName;
+      existingUser.Password = enteredPassword;
+      localStorage.setItem("userName", enteredName);
+      localStorage.setItem("userEmail", enteredEmail);
+      localStorage.setItem("languageAccess", true);
+      closeModal();
+      toast.success("Добро пожаловать!");
+    } else {
+      // Создаем нового пользователя
+      const lastId = tasksData.user.length ? tasksData.user[tasksData.user.length - 1].id : 0;
+      const newUser = {
+        id: lastId + 1,
+        email: enteredEmail,
+        name: enteredName,
+        Password: enteredPassword,
+      };
+      tasksData.user.push(newUser);
+      localStorage.setItem("userName", enteredName);
+      localStorage.setItem("userEmail", enteredEmail);
+      localStorage.setItem("languageAccess", true);
+      closeModal();
+      toast.success("Регистрация прошла успешно!");
+    }
+  }
+  
+  
   return (
     <>
       <ModalBackdrop >
@@ -103,7 +140,7 @@ const Modal = ({ closeModal }) => {
                 <StyledLine src={line} alt="" />
               </ModalOR>
             
-            <ModalForm>
+            <ModalForm onSubmit={register}>
               <InputContainer>
                 <label htmlFor="user_mail">
                  E-mail

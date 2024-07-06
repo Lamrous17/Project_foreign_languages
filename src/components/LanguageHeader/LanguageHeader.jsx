@@ -7,6 +7,9 @@ import { useLocation } from 'react-router-dom'
 
 const LanguageHeader = () => {
   const userName = localStorage.getItem("userName");
+  const counter = 0;
+  localStorage.setItem("userCounter", counter);
+  const userCounter = localStorage.getItem("userCounter");
   const location = useLocation();
 
   function openMenu() {
@@ -29,7 +32,7 @@ const LanguageHeader = () => {
           
         </LanguageContainer>
         <UserName>{userName}</UserName>
-        <ScoreCounter>0</ScoreCounter>
+        <ScoreCounter>{userCounter}</ScoreCounter>
       </StyledLanguageHeader>
     </>
   )
