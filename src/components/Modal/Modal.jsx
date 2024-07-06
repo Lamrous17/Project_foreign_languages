@@ -17,10 +17,12 @@ const Modal = ({ closeModal }) => {
 
     const user = tasksData.user.find(
       (user) =>
-        user["e-mail"] === enteredEmail && user["Password"] === enteredPassword
+        user["email"] === enteredEmail && user["Password"] === enteredPassword
     );
 
     if (user) {
+      localStorage.setItem("userName", user.name);
+      localStorage.setItem("userEmail", user.email);
       closeModal();
       localStorage.setItem("languageAccess", true);
       return toast.success("Добро пожаловать!");
@@ -28,7 +30,6 @@ const Modal = ({ closeModal }) => {
       return toast.error("Неправильно введенный имейл или пароль");
     }
   }
-  
   return (
     <>
       <ModalBackdrop >

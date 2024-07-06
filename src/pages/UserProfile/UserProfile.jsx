@@ -9,7 +9,8 @@ import { ProfileUserName, ProfileHeader, ProfilePhotoGag, ProfileSectionHeader, 
 
 
 const UserProfile = () => {
-
+  const userName = localStorage.getItem("userName");
+  const userEmail = localStorage.getItem("userEmail");
   function openMenu() {
     const menu = document.querySelector('#userMenu')
     menu.style.transform = "translateX(0%)";
@@ -34,9 +35,9 @@ const UserProfile = () => {
                   <p>Загрузить фото</p>
                 </ProfilePhotoGag>
                 {/* <img src="" alt="" /> */}
-                <ProfileUserName>Nastya</ProfileUserName>
+                <ProfileUserName>{userName}</ProfileUserName>
               </div>
-              <ProfileUserEmail>nastia@gmail.com</ProfileUserEmail>
+              <ProfileUserEmail>{userEmail}</ProfileUserEmail>
           </ProfileSections>
 
           <ProfileSections isSecond> 

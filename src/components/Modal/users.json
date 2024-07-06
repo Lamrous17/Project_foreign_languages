@@ -2,13 +2,13 @@
     "user": [
     { 
         "id": 1,
-        "e-mail": "nastia@gmail.com", 
+        "email": "nastia@gmail.com", 
         "name": "Nastia",
         "Password": "123456"
     },
     {
         "id": 2,
-        "e-mail": "stasy@gmail.com", 
+        "email": "stasy@gmail.com", 
         "name": "Stasy",
         "Password": "another"
     }

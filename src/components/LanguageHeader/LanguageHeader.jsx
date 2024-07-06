@@ -6,7 +6,7 @@ import UserMenu from '../UserMenu/UserMenu.jsx'
 import { useLocation } from 'react-router-dom'
 
 const LanguageHeader = () => {
-
+  const userName = localStorage.getItem("userName");
   const location = useLocation();
 
   function openMenu() {
@@ -28,7 +28,7 @@ const LanguageHeader = () => {
             </FlagContainer>}
           
         </LanguageContainer>
-        <UserName>Nastya</UserName>
+        <UserName>{userName}</UserName>
         <ScoreCounter>0</ScoreCounter>
       </StyledLanguageHeader>
     </>
